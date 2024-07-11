@@ -60,6 +60,8 @@ import {
   HiViewBoards,
   HiX,
 } from "react-icons/hi";
+import Login from "./login";
+import Register from "./register";
 
 export const HomePageContent: NextPage = function () {
   return (
@@ -67,10 +69,19 @@ export const HomePageContent: NextPage = function () {
       <section>
         <header>
           <h1 className="mb-6 text-5xl font-extrabold dark:text-white">
-            Welcome to <code>Flowbite</code> on <code>Next.js</code>!
+            Accept All Cookies
           </h1>
         </header>
       </section>
+      <section>
+        <header>
+          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
+            Login
+          </h2>
+        </header>
+      </section>
+      <Login />
+      <Register />
       <section>
         <header>
           <h2 className="mb-3 text-4xl font-bold dark:text-gray-200">Alert</h2>
@@ -149,14 +160,7 @@ export const HomePageContent: NextPage = function () {
         </header>
         <DropdownExample />
       </section>
-      <section>
-        <header>
-          <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
-            Forms
-          </h2>
-        </header>
-        <FormsExample />
-      </section>
+
       <section>
         <header>
           <h2 className="mb-3 mt-9 text-4xl font-bold dark:text-gray-200">
