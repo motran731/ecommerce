@@ -30,9 +30,9 @@ export default function Login() {
         <label> Remember me</label>
       </div>
       <button className="w-full rounded-lg bg-red-700 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-red-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800 sm:w-auto">
-        {" "}
         Submit{" "}
       </button>
+
     </form>
   );
 }

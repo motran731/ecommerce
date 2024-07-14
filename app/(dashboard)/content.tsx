@@ -62,16 +62,18 @@ import {
 } from "react-icons/hi";
 import Login from "./login";
 import Register from "./register";
+import Score from "./score";
 
 export const HomePageContent: NextPage = function () {
   return (
     <div className="p-6">
       <section>
         <header>
-          <h1 className="mb-6 text-5xl font-extrabold dark:text-white">
+          <h1 className="mb-6 text-center text-5xl font-extrabold dark:text-white">
             Accept All Cookies
           </h1>
         </header>
+        <Score />
       </section>
       <section>
         <header>
@@ -80,8 +82,10 @@ export const HomePageContent: NextPage = function () {
           </h2>
         </header>
       </section>
-      <Login />
+
       <Register />
+      <Login />
+
       <section>
         <header>
           <h2 className="mb-3 text-4xl font-bold dark:text-gray-200">Alert</h2>
