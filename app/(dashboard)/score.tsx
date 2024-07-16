@@ -67,40 +67,35 @@ function Counter(props: any) {
 }
 
 export default function Score() {
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState();
   const [pay, setPay] = useState(0);
-  const [newScore, setNewScore] = useState();
   // const [isClicked, setIsClicked]= useState(false);
 
-  function handleClick() {
-    //   setIsClicked(!isClicked)
-    //   //console.log("ive been clicked");
-  }
-  // function scoreChange() {
-  //   setPay;
-  // }
+  function handleClick(e: any) {
+    e.preventDefault();
+    setScore(Number(e.target.value));
 
-  function handleChange(event: any) {
-    setPay(event.target.value);
-    setPay(event.target.value);
+    console.log("ive been clicked");
   }
 
   return (
     <div>
       <Counter />
+      <h2 className="text-5xl  font-extrabold text-primary-600">💲 {score}</h2>
       <label
         htmlFor="score"
-        className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
+        className="text-m mb-2 block font-medium text-gray-900 dark:text-white"
       >
         score
       </label>
       <input
-        type="score"
+        type="text"
         name="score"
-        id="score"
-        //onChange={setScore}
+        value={score}
+        onChange={(e) => setScore(Number(e.target.value))}
         className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
       />
+      <button onClick={handleClick}> Click </button>
       <label
         htmlFor="pay"
         className="mb-2 block text-sm font-medium text-gray-900 dark:text-white"
@@ -108,15 +103,12 @@ export default function Score() {
         pay out
       </label>
       <input
-        type="pay"
+        type="text"
         name="pay"
         id="pay"
         //onChange={setScore}
         className="block w-full rounded-lg border border-gray-300 bg-gray-50 p-2.5 text-sm text-gray-900 focus:border-primary-600 focus:ring-primary-600 dark:border-gray-600 dark:bg-gray-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500"
       />
-      <button onClick={handleClick}> Click </button>
-
-      <h2 className="text-5xl  font-extrabold text-primary-600">💲 {score}</h2>
     </div>
   );
 }
